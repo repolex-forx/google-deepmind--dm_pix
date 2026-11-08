@@ -1,0 +1,11 @@
+{
+  "org": "google-deepmind",
+  "repo": "dm_pix",
+  "versions": [
+    {
+      "commit": "7abc22eb98efe75f79939142a0f32fe97c03e9e4",
+      "tag": "v0.5.0",
+      "parsed_at": "2026-11-08T08:59:30.023954+00:00"
+    }
+  ]
+}

@@ -1,1 +1,117 @@
-Initializing
+# Repolex Knowledge Graph of google-deepmind/dm_pix
+
+RDF knowledge graph data for [google-deepmind/dm_pix](https://github.com/google-deepmind/dm_pix), parsed by [repolex](https://repolex.ai).
+
+> **Note**: This data is experimental and subject to change without notice.
+
+## How to use this data
+
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
+
+```bash
+cargo install --git https://github.com/repolex-ai/rlex
+```
+
+Verify the install:
+
+```bash
+rlex --help
+```
+
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
+
+To load this repo's data:
+
+```bash
+rlex download google-deepmind/dm_pix
+```
+
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
+
+## Data structure
+
+All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) (`.nq.gz`), a standard RDF format that can be loaded into any triplestore or graph database.
+
+```
+.
+├── aggregate
+│   ├── ast
+│   │   └── 7abc22eb98efe75f79939142a0f32fe97c03e9e4
+│   │       └── chunk-001.nq.gz
+│   └── repolex
+│       └── 7abc22eb98efe75f79939142a0f32fe97c03e9e4
+│           └── chunk-001.nq.gz
+├── blob
+│   ├── 02ad534c9b23cdb88423a2386c08162eb051e50d.nq.gz
+│   ├── 08131b3d7cc0b09f772b84bab342d916e10b3c67.nq.gz
+│   ├── 08b2ec3f7f0a9cfa78e219400dbb094d7fdc8b7a.nq.gz
+│   ├── 0ad9bd78a6bf896236590ed3e7b03815a9e52d8d.nq.gz
+│   ├── 162831af72c48d278fcec5484ac75b1c4f05eb66.nq.gz
+│   ├── 1f44ba663a2035a19d3a434955c103646229781a.nq.gz
+│   ├── 2112b96bd5042df2075cde8c7064ed2c1aacc0fa.nq.gz
+│   ├── 24964f0a90a90762e9e3fdb3b99ee780c722fae5.nq.gz
+│   ├── 2705b3f3195b5c43262861776cefcccd1c06a5b0.nq.gz
+│   ├── 2bf19714b3f53c0e99c5e77b07615ec2910a492b.nq.gz
+│   ├── 2d9f5930c3376deec4602f63e460abc9f4b1b4b3.nq.gz
+│   ├── 3d73d73beb872af8f4ab3a83dff1281a73f6e3ce.nq.gz
+│   ├── 3f139b989e48af0e521ed550d9c8c2c4cf41c1d1.nq.gz
+│   ├── 50d049aed361bbb2d9a8ce96a9e3f0adbd5d6b04.nq.gz
+│   ├── 51285967a7d9722c5bdee4f6a81c154a56aa0846.nq.gz
+│   ├── 5828639575eba6360653861c73fb6e1796e2bb4e.nq.gz
+│   ├── 660b9bc4d87c010b97899b551a596f7e3805d7fc.nq.gz
+│   ├── 669a217edd9a162cfc60f9be5cbc643c08e63a3c.nq.gz
+│   ├── 79ee416c0c4dead92aee801a5392cbf8c5df6c11.nq.gz
+│   ├── 7b0aaeffd0bca3257085ba9e99fdc612fdf3e17d.nq.gz
+│   ├── 7e4ae33bb8fe39fa3533da7c1d81e176f03abce3.nq.gz
+│   ├── 7f29ec767b4fdd2c1b91190b774502b9a57f12ce.nq.gz
+│   ├── 827ed76aef4f53c0da9e07f106059a59bb701d7a.nq.gz
+│   ├── 889629646abdc4f3c90f7480849a14bdd5176103.nq.gz
+│   ├── 903baa93115b7988e018bf3674933196cded8466.nq.gz
+│   ├── 92b8f9226eaedb3f4c873d8d9bba0c7f6497468f.nq.gz
+│   ├── 93e034886ece9bec4c37693a4c7c1519d9efdf14.nq.gz
+│   ├── a4116b5f39bd8faa5749e95ba2f98b67f39284e1.nq.gz
+│   ├── b1e0b51cd080b0b77bcbba2618719a0d31d75627.nq.gz
+│   ├── bd367490dc646b205fa5e22bf6066e580d7188ef.nq.gz
+│   ├── c815ebbbca4a9b9c277801a203f54fa0522f3450.nq.gz
+│   ├── d0df45f2bfc11ed7019c0439a3b8398f83d7b346.nq.gz
+│   ├── d2e7a802d14987aff8c51a7f3c43af7f2ef5d750.nq.gz
+│   ├── d645695673349e3947e8e5ae42332d0ac3164cd7.nq.gz
+│   ├── e615fd265ccac2963c11dbe746380399e0110969.nq.gz
+│   ├── e69de29bb2d1d6434b8b29ae775ad8c2e48c5391.nq.gz
+│   ├── f7a4aa139e1d94f798ea0fd26d19fa3b14af1133.nq.gz
+│   └── fdbba534bf95fe218f155a97d6668a6294ae5157.nq.gz
+├── branch
+│   └── branch.nq.gz
+├── commit
+│   └── commit.nq.gz
+├── filetree
+│   └── 7abc22eb98efe75f79939142a0f32fe97c03e9e4.nq.gz
+├── issue
+│   └── issue.nq.gz
+├── pr
+│   └── pr.nq.gz
+└── tag
+    └── tag.nq.gz
+
+13 directories, 46 files
+```
+
+| Directory | What it contains |
+|-----------|-----------------|
+| `blob/` | Per-file AST graphs, content-addressed by git blob SHA. Each file in the source repo gets its own graph. |
+| `aggregate/ast/` | Combined AST graph per parsed commit. Merges all blob graphs for a snapshot of the entire codebase at that point. |
+| `aggregate/lsp/` | Language Server Protocol enrichment: resolved symbols, definitions, references, and type information. |
+| `aggregate/dataflow/` | Interprocedural data flow edges between functions and modules. |
+| `aggregate/repolex/` | Combined graph (AST + LSP + dataflow) per commit. |
+| `commit/` | Git commit metadata (author, date, message, parent links). |
+| `branch/` | Branch metadata. |
+| `tag/` | Tag metadata. |
+| `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
+
+## Source repository
+
+[google-deepmind/dm_pix](https://github.com/google-deepmind/dm_pix)
+
+---
+*Parsed on 2026-11-08 by [repolex](https://repolex.ai)*
